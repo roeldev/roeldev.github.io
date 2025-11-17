@@ -1,1 +1,0 @@
-import{f as n,a as s}from"../chunks/DO6EhnEx.js";import{c as t,a as i}from"../chunks/CWoUIFS5.js";import{s as p}from"../chunks/C19JDUqh.js";var e=n('<main class="py-8"><!></main>');function d(o,r){var a=e(),m=t(a);p(m,()=>r.children),i(a),s(o,a)}export{d as component};
