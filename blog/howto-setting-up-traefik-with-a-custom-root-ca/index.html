@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
 		<link href="../../_app/immutable/assets/bundle.DDE-5mGi.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/bundle.E102wNqy.js"><!--12qhfyh--><link rel="icon" href="/_app/immutable/assets/favicon.CpZYNyI8.png"/> <meta property="description" content="Personal website of Roel Schut. Feel free to contact me if you have any questions related to web-based applications."/> <meta property="og:description" content="Personal website of Roel Schut. Feel free to contact me if you have any questions related to web-based applications."/> <meta name="robots" content="index,follow"/> <meta name="googlebot" content="index,follow"/><!----><!--cw7136--><!--[!--><!--]--> <!----><script>(function setInitialMode({ defaultMode = "system", themeColors: themeColors2, darkClassNames: darkClassNames2 = ["dark"], lightClassNames: lightClassNames2 = [], defaultTheme = "", modeStorageKey: modeStorageKey2 = "mode-watcher-mode", themeStorageKey: themeStorageKey2 = "mode-watcher-theme" }) {
+		<link rel="modulepreload" href="../../_app/immutable/bundle.9YiLExzn.js"><!--12qhfyh--><link rel="icon" href="/_app/immutable/assets/favicon.CpZYNyI8.png"/> <meta property="description" content="Personal website of Roel Schut. Feel free to contact me if you have any questions related to web-based applications."/> <meta property="og:description" content="Personal website of Roel Schut. Feel free to contact me if you have any questions related to web-based applications."/> <meta name="robots" content="index,follow"/> <meta name="googlebot" content="index,follow"/><!----><!--cw7136--><!--[!--><!--]--> <!----><script>(function setInitialMode({ defaultMode = "system", themeColors: themeColors2, darkClassNames: darkClassNames2 = ["dark"], lightClassNames: lightClassNames2 = [], defaultTheme = "", modeStorageKey: modeStorageKey2 = "mode-watcher-mode", themeStorageKey: themeStorageKey2 = "mode-watcher-theme" }) {
   const rootEl = document.documentElement;
   const mode = localStorage.getItem(modeStorageKey2) ?? defaultMode;
   const theme = localStorage.getItem(themeStorageKey2) ?? defaultTheme;
@@ -42,12 +42,13 @@
 				connections for (Docker) services exposed via Traefik.</p> <h2 id="requirements">Requirements</h2> <ul><li>some basic Linux knowlegde</li> <li>basic Docker compose (or similar) knowledge</li> <li>a host machine with a static IP address (recommended) running Docker (or similar)</li> <li>an internal (wildcard) domain name, pointing to the host machine's IP address</li></ul> <p class="info">The internal domain name can be pretty much anything (eg. <code>example.lan</code>). To point it
 				to an IP address, you need to create a DNS record for that domain on your internal network's DNS server (eg.
 				PiHole) or router.</p> <h2 id="1"><span>1.</span> Introduction</h2> <p>Using a reverse-proxy to expose your (Docker) services seems pretty obvious to me. So I won't explain why you
-				would want to do this. Using your own private/internal certificate authority (CA) however is less common. Why
-				would you bother setting one up? Well, at first it gives you the flexibility to generate certificates based
+				would want to do this. Using your own private/internal <i>certificate authority</i> (CA) however is less common.
+				Why would you bother setting one up? Well, at first it gives you the flexibility to generate certificates based
 				on your own root certificate, for any internal domain/device you'd like. For example, this allows for generating
 				TLS certificates for IoT devices or within your local dev environment. And it is able to do so without sending a
 				request to an external service on the internet (eg. <a target="_blank" rel="noopener noreferrer" href="https://letsencrypt.org/"><!---->Let's Encrypt<!----></a><!---->). You
-				also do not need a public domain name for all this to work.</p> <p>I'll be using a TrueNAS Scale server as my host machine. As of version <a target="_blank" rel="noopener noreferrer" href="https://www.truenas.com/docs/scale/24.10/gettingstarted/scalereleasenotes/#upgrade-notes"><!---->24.10<!----></a><!---->, the
+				also do not need a public domain name for all this to work. A downside is, you'll need to add your <i>public root
+				certificate</i> to all your devices before they trust any generated certificate that's based on it.</p> <p>I'll be using a TrueNAS Scale server as my host machine. As of version <a target="_blank" rel="noopener noreferrer" href="https://www.truenas.com/docs/scale/24.10/gettingstarted/scalereleasenotes/#upgrade-notes"><!---->24.10<!----></a><!---->, the
 				TrueNAS Apps feature backend uses Docker (compose). TrueNAS "Apps" are actually just Docker containers which are
 				started from a template similar to a <code>compose.yaml</code> file.</p> <p>I'm also using a Unifi router with Unifi Controller in which I've added a <a target="_blank" rel="noopener noreferrer" href="https://help.ui.com/hc/en-us/articles/15179064940439-UniFi-DNS-Records-and-Local-Hostnames"><!---->DNS
 				Policy<!----></a><!----> pointing <code>*.svc.lan</code> to the static IP address of my TrueNAS server. This ensures all
@@ -406,13 +407,13 @@ sudo update-ca-certificates<!----></code></pre><!--]--></span><!----> <p class="
 			
 			<script>
 				{
-					__sveltekit_15tds2h = {
+					__sveltekit_brqtdr = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
-					import("../../_app/immutable/bundle.E102wNqy.js").then((app) => {
+					import("../../_app/immutable/bundle.9YiLExzn.js").then((app) => {
 						app.start(element, {
 							node_ids: [0, 2, 5],
 							data: [null,null,null],
