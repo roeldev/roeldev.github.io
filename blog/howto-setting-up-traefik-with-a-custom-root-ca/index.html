@@ -4,8 +4,8 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
-		<link href="../../_app/immutable/assets/bundle.qlTvlxsC.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/bundle.DeUGG5-E.js"><!--12qhfyh--><link rel="icon" href="/_app/immutable/assets/favicon.CpZYNyI8.png"/> <meta property="description" content="Personal website of Roel Schut. Feel free to contact me if you have any questions related to web-based applications."/> <meta property="og:description" content="Personal website of Roel Schut. Feel free to contact me if you have any questions related to web-based applications."/> <meta name="robots" content="index,follow"/> <meta name="googlebot" content="index,follow"/><!----><!--cw7136--><!--[!--><!--]--> <!----><script>(function setInitialMode({ defaultMode = "system", themeColors: themeColors2, darkClassNames: darkClassNames2 = ["dark"], lightClassNames: lightClassNames2 = [], defaultTheme = "", modeStorageKey: modeStorageKey2 = "mode-watcher-mode", themeStorageKey: themeStorageKey2 = "mode-watcher-theme" }) {
+		<link href="../../_app/immutable/assets/bundle.DDE-5mGi.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/bundle.E102wNqy.js"><!--12qhfyh--><link rel="icon" href="/_app/immutable/assets/favicon.CpZYNyI8.png"/> <meta property="description" content="Personal website of Roel Schut. Feel free to contact me if you have any questions related to web-based applications."/> <meta property="og:description" content="Personal website of Roel Schut. Feel free to contact me if you have any questions related to web-based applications."/> <meta name="robots" content="index,follow"/> <meta name="googlebot" content="index,follow"/><!----><!--cw7136--><!--[!--><!--]--> <!----><script>(function setInitialMode({ defaultMode = "system", themeColors: themeColors2, darkClassNames: darkClassNames2 = ["dark"], lightClassNames: lightClassNames2 = [], defaultTheme = "", modeStorageKey: modeStorageKey2 = "mode-watcher-mode", themeStorageKey: themeStorageKey2 = "mode-watcher-theme" }) {
   const rootEl = document.documentElement;
   const mode = localStorage.getItem(modeStorageKey2) ?? defaultMode;
   const theme = localStorage.getItem(themeStorageKey2) ?? defaultTheme;
@@ -33,38 +33,51 @@
     localStorage.setItem(themeStorageKey2, theme);
   }
   localStorage.setItem(modeStorageKey2, mode);
-})({"defaultMode":"system","darkClassNames":["dark"],"lightClassNames":[],"defaultTheme":"","modeStorageKey":"mode-watcher-mode","themeStorageKey":"mode-watcher-theme"});</script><!----><!----><!--17j22sm--><meta name="author" content="Roel Schut"/> <meta property="og:locale" content="en_US"/> <meta property="og:type" content="article"/> <meta property="og:site_name" content="Personal website of Roel Schut"/><!----><!--x07m60--><meta name="author" content="Roel Schut"/> <meta property="article:published_time" content="2025-11-25T16:00:00+02:00"/> <meta property="article:modified_time" content="2025-11-25T17:00:00+02:00"/> <meta property="og:title" content="How-to: setting up secure connections using Traefik and a custom root certificate"/> <meta property="description" content="In this tutorial I'll show you how to set up secure connections using Traefik with step-ca as ACME cert resolver."/> <meta property="og:description" content="In this tutorial I'll show you how to set up secure connections using Traefik with step-ca as ACME cert resolver."/> <meta property="og:url" content="https://roelschut.nl/blog/howto-setting-up-traefik-with-a-custom-root-ca/"/><!----><title>roelschut.nl | Personal website of Roel Schut</title>
+})({"defaultMode":"system","darkClassNames":["dark"],"lightClassNames":[],"defaultTheme":"","modeStorageKey":"mode-watcher-mode","themeStorageKey":"mode-watcher-theme"});</script><!----><!----><!--17j22sm--><meta name="author" content="Roel Schut"/> <meta property="og:locale" content="en_US"/> <meta property="og:type" content="article"/> <meta property="og:site_name" content="Personal website of Roel Schut"/><!----><!--x07m60--><meta name="author" content="Roel Schut"/> <meta property="article:published_time" content="2025-12-01T16:00:00+02:00"/> <meta property="article:modified_time" content="2025-12-01T17:00:00+02:00"/> <meta property="og:title" content="How-to: setting up secure connections using Traefik and a custom root certificate"/> <meta property="description" content="In this tutorial I'll show you how to set up secure connections using Traefik with step-ca as ACME cert resolver."/> <meta property="og:description" content="In this tutorial I'll show you how to set up secure connections using Traefik with step-ca as ACME cert resolver."/> <meta property="og:url" content="https://roelschut.nl/blog/howto-setting-up-traefik-with-a-custom-root-ca/"/><!----><title>roelschut.nl | Personal website of Roel Schut</title>
 </head>
 <body data-sveltekit-preload-data="hover">
-<div style="display: contents"><!--[--><!--[--><!----><!--[!--><!--]--><!----> <div class="body bg"><header><div class="flex items-center"><!--[!--><button data-slot="button" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 sm:hidden" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-menu size-5"><!--[--><!----><path d="M4 5h16"><!----></path><!----><!----><path d="M4 12h16"><!----></path><!----><!----><path d="M4 19h16"><!----></path><!----><!--]--><!----><!----></svg><!----></button><!--]--><!----> <div class="fullscreen-menu"><!--[!--><button data-slot="button" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 sm:hidden" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-x size-8"><!--[--><!----><path d="M18 6 6 18"><!----></path><!----><!----><path d="m6 6 12 12"><!----></path><!----><!--]--><!----><!----></svg><!----></button><!--]--><!----> <nav aria-label="Main"><ul><li><a href="/">About</a></li> <li><a href="/blog">Blog</a></li> <li><a href="https://github.com/roeldev" rel="nofollow noopener">Projects</a></li> <li><a href="/#contact">Contact</a></li></ul></nav></div></div> <div class="flex items-center"><!--[!--><button data-slot="button" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-moon size-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><!--[--><!----><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"><!----></path><!----><!--]--><!----><!----></svg><!----> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-sun size-5 absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><!--[--><!----><circle cx="12" cy="12" r="4"><!----></circle><!----><!----><path d="M12 2v2"><!----></path><!----><!----><path d="M12 20v2"><!----></path><!----><!----><path d="m4.93 4.93 1.41 1.41"><!----></path><!----><!----><path d="m17.66 17.66 1.41 1.41"><!----></path><!----><!----><path d="M2 12h2"><!----></path><!----><!----><path d="M20 12h2"><!----></path><!----><!----><path d="m6.34 17.66-1.41 1.41"><!----></path><!----><!----><path d="m19.07 4.93-1.41 1.41"><!----></path><!----><!--]--><!----><!----></svg><!----> <span class="sr-only">Toggle light/dark mode</span><!----></button><!--]--><!----></div></header><!----> <!--[--><!----><!----><main><div class="md:flex md:border-b-1 md:bg-slate-50 md:dark:bg-slate-900"><figure class="md:w-1/2 md:h-100 relative overflow-hidden"><img src="/_app/immutable/assets/heading_traefik_gopher.B2eWu02z.jpg" alt="Traefik Gopher" class="h-1/1 object-cover"/> <figcaption class="absolute bottom-0 p-2 text-xs text-white text-shadow-black opacity-30">Copyright of this image
-				belongs to the their respective owners.</figcaption></figure> <div class="md:w-1/2 gutter grid"><div class="page-heading content-center"><!--[--><time datetime="2025-11-25">25/11/2025</time><!--]--> <h1>How-to: setting up secure connections using Traefik and a custom root certificate</h1> <ul class="page-heading__tags"><!--[--><li>how-to</li><li>Traefik</li><li>reverse-proxy</li><li>step-ca</li><li>TLS</li><li>certificate</li><li>root ca</li><li>ACME</li><li>Docker</li><li>TrueNAS</li><!--]--></ul> <!----><!----></div><!----></div><!----></div> <div class="gutter md:flex"><div class="flex-1 pr-10"><nav class="chapters hidden xl:block" aria-label="Chapters"><h6>On this page</h6> <ol><!--[--><li><a href="#1">1. Introduction</a></li><li><a href="#2">2. Set up Traefik</a></li><li><a href="#2.1">2.1. Create Traefik app on TrueNAS</a></li><li><a href="#2.2">2.2. Run Traefik using compose</a></li><li><a href="#2.3">2.3. Confirm Traefik is up and running</a></li><li><a href="#3">3. Generate a root certificate</a></li><li><a href="#3.1">3.1. Generate a root certificate using step cli</a></li><li><a href="#4">4. Set up step-ca ACME service</a></li><li><a href="#4.1">4.1 Entrypoint fix for version 0.28.4</a></li><li><a href="#4.2">4.2 Run step-ca service</a></li><li><a href="#5">5. Invoking trust using our root certificate</a></li><li><a href="#6">6. Test SSL redirect using whoami</a></li><!--]--> <li><button>Back to top</button></li></ol></nav><!----></div> <div class="flex-auto content"><p class="intro">In this tutorial I'll show you how to set up Traefik as a reverse-proxy, create a root
-				certificate using step-ca and use this as an ACME cert resolver to enable secure connections for (Docker)
-				services exposed via Traefik.</p> <h2 id="requirements">Requirements</h2> <ul><li>some basic Linux knowlegde</li> <li>basic Docker compose (or similar) knowledge</li> <li>a host machine with a static IP address (recommended) running Docker (or similar)</li> <li>an internal (wildcard) domain name, pointing to the host machine's IP address</li></ul> <p class="info">The internal domain name can be pretty much anything (eg. <code>example.lan</code>). To point it
+<div style="display: contents"><!--[--><!--[--><!----><!--[!--><!--]--><!----> <div class="body bg"><header><div class="flex items-center"><!--[!--><button data-slot="button" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 sm:hidden" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-menu size-5"><!--[--><!----><path d="M4 5h16"><!----></path><!----><!----><path d="M4 12h16"><!----></path><!----><!----><path d="M4 19h16"><!----></path><!----><!--]--><!----><!----></svg><!----></button><!--]--><!----> <div class="fullscreen-menu"><!--[!--><button data-slot="button" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 sm:hidden" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-x size-8"><!--[--><!----><path d="M18 6 6 18"><!----></path><!----><!----><path d="m6 6 12 12"><!----></path><!----><!--]--><!----><!----></svg><!----></button><!--]--><!----> <nav aria-label="Main"><ul><li><a href="/">About</a></li> <li><a href="/blog">Blog</a></li> <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/roeldev"><!---->Projects<!----></a><!----></li> <li><a href="/#contact">Contact</a></li></ul></nav></div></div> <div class="flex items-center"><!--[!--><!--]-->  <!--[!--><button data-slot="button" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-moon size-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><!--[--><!----><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"><!----></path><!----><!--]--><!----><!----></svg><!----> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-sun size-5 absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><!--[--><!----><circle cx="12" cy="12" r="4"><!----></circle><!----><!----><path d="M12 2v2"><!----></path><!----><!----><path d="M12 20v2"><!----></path><!----><!----><path d="m4.93 4.93 1.41 1.41"><!----></path><!----><!----><path d="m17.66 17.66 1.41 1.41"><!----></path><!----><!----><path d="M2 12h2"><!----></path><!----><!----><path d="M20 12h2"><!----></path><!----><!----><path d="m6.34 17.66-1.41 1.41"><!----></path><!----><!----><path d="m19.07 4.93-1.41 1.41"><!----></path><!----><!--]--><!----><!----></svg><!----> <span class="sr-only">Toggle light/dark mode</span><!----></button><!--]--><!----></div></header><!----> <!--[--><!----><!----><main><div class="md:flex md:border-b-1 md:bg-slate-50 md:dark:bg-slate-900"><figure class="md:w-1/2 md:h-100 relative overflow-hidden"><img src="/_app/immutable/assets/heading_traefik_gopher.B2eWu02z.jpg" alt="Traefik Gopher" class="h-1/1 object-cover"/> <figcaption class="absolute bottom-0 p-2 text-xs text-white text-shadow-black opacity-30">Copyright of this image
+				belongs to its respective owner(s).</figcaption></figure> <div class="md:w-1/2 gutter grid"><div class="page-heading content-center"><!--[--><time datetime="2025-12-01">1/12/2025</time><!--]--> <h1>How-to: setting up secure connections using Traefik and a custom root certificate</h1> <ul class="page-heading__tags"><!--[--><li>how-to</li><li>Traefik</li><li>reverse-proxy</li><li>step-ca</li><li>TLS</li><li>certificate</li><li>root ca</li><li>ACME</li><li>Docker</li><li>TrueNAS</li><!--]--></ul> <!----><!----></div><!----></div><!----></div> <div class="gutter lg:flex"><div class="lg:w-3/10 lg:pr-10"><nav class="chapters" aria-label="Chapters"><h6>On this page</h6> <ol><!--[--><li><a href="#1">1. Introduction</a></li><li><a href="#2">2. Set up Traefik</a></li><li><a href="#2.1">2.1. Create Traefik app on TrueNAS</a></li><li><a href="#2.2">2.2. Run Traefik using compose</a></li><li><a href="#2.3">2.3. Confirm Traefik is up and running</a></li><li><a href="#3">3. Generate a root certificate using step cli</a></li><li><a href="#4">4. Set up step-ca</a></li><li><a href="#4.1">4.1. Configure step-ca as a cert resolver for Traefik</a></li><li><a href="#5">5. Invoking trust using our root certificate</a></li><li><a href="#6">6. Test SSL redirect using whoami</a></li><!--]--> <li><button>Back to top</button></li></ol></nav><!----></div> <div class="lg:w-7/10 content"><p class="intro">In this tutorial I'll show you how to set up Traefik as a reverse-proxy, create a root
+				certificate using <code>step</code> and use this with step-ca as an ACME cert resolver to enable secure
+				connections for (Docker) services exposed via Traefik.</p> <h2 id="requirements">Requirements</h2> <ul><li>some basic Linux knowlegde</li> <li>basic Docker compose (or similar) knowledge</li> <li>a host machine with a static IP address (recommended) running Docker (or similar)</li> <li>an internal (wildcard) domain name, pointing to the host machine's IP address</li></ul> <p class="info">The internal domain name can be pretty much anything (eg. <code>example.lan</code>). To point it
 				to an IP address, you need to create a DNS record for that domain on your internal network's DNS server (eg.
-				PiHole) or router.</p> <h2 id="1"><span>1.</span> Introduction</h2> <p>Why would you want to set up a private/internal certificate authority (CA)? Well, at first it gives you the
-				flexibility to generate certificates based on your own root certificate, for any internal domain/device you'd
-				like. For example, this allows for generating TLS certificates for IoT devices or within your local dev
-				environment. And it is able to do so without sending a request to an external service on the internet (eg Let's
-				encrypt). You also do not need a public domain name for all this to work.</p> <p>I'll be using a TrueNAS Scale server as my host machine. As of version <a target="_blank" rel="noopener noreferrer" href="https://www.truenas.com/docs/scale/24.10/gettingstarted/scalereleasenotes/#upgrade-notes"><!---->24.10<!----></a><!---->, the
+				PiHole) or router.</p> <h2 id="1"><span>1.</span> Introduction</h2> <p>Using a reverse-proxy to expose your (Docker) services seems pretty obvious to me. So I won't explain why you
+				would want to do this. Using your own private/internal certificate authority (CA) however is less common. Why
+				would you bother setting one up? Well, at first it gives you the flexibility to generate certificates based
+				on your own root certificate, for any internal domain/device you'd like. For example, this allows for generating
+				TLS certificates for IoT devices or within your local dev environment. And it is able to do so without sending a
+				request to an external service on the internet (eg. <a target="_blank" rel="noopener noreferrer" href="https://letsencrypt.org/"><!---->Let's Encrypt<!----></a><!---->). You
+				also do not need a public domain name for all this to work.</p> <p>I'll be using a TrueNAS Scale server as my host machine. As of version <a target="_blank" rel="noopener noreferrer" href="https://www.truenas.com/docs/scale/24.10/gettingstarted/scalereleasenotes/#upgrade-notes"><!---->24.10<!----></a><!---->, the
 				TrueNAS Apps feature backend uses Docker (compose). TrueNAS "Apps" are actually just Docker containers which are
 				started from a template similar to a <code>compose.yaml</code> file.</p> <p>I'm also using a Unifi router with Unifi Controller in which I've added a <a target="_blank" rel="noopener noreferrer" href="https://help.ui.com/hc/en-us/articles/15179064940439-UniFi-DNS-Records-and-Local-Hostnames"><!---->DNS
 				Policy<!----></a><!----> pointing <code>*.svc.lan</code> to the static IP address of my TrueNAS server. This ensures all
-				traffic to this domain from within my network is routed to my server.</p> <h2 id="2"><span>2.</span> Set up Traefik</h2> <p>We'll start with Traefik by creating a separated Docker network called <code>traefik-public</code>, which we'll
-				add to each service that we want to expose with Traefik.</p> <p>SSH into your host machine and add a new network:</p> <!--[!--><!--]--> <code><!---->docker network create --attachable traefik-public<!----></code><!----> <p class="info">You might have to use <code>sudo</code> if your user is not a member of the <code>docker</code> user group.</p> <p>I like to keep the "static" files (like <code>compose.yaml</code> and certain configuration files) separated
+				traffic to this domain from within my network is routed to my server.</p> <p>If you do not care for any explanation or just want to see the end result, headover to the <a target="_blank" rel="noopener" href="https://github.com/roeldev/example-compose-traefik-step-ca"><!---->repository on GitHub<!----></a><!---->.</p> <h2 id="2"><span>2.</span> Set up Traefik</h2> <p>We'll start with Traefik by creating a separated Docker network called <code>traefik-public</code>, which we'll
+				add to each service that we want to expose with Traefik.</p> <p>SSH into your host machine and add a new network:</p> <span class="code-block"><!--[--><pre><span class="code-block__command"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-terminal"><!--[--><!----><path d="M12 19h8"><!----></path><!----><!----><path d="m4 17 6-6-6-6"><!----></path><!----><!--]--><!----><!----></svg><!----></span><code><!---->docker network create --attachable traefik-public<!----></code></pre><!--]--></span><!----> <p class="info">You might have to use <code>sudo</code> if your user is not a member of the <code>docker</code> user group.</p> <p>I like to keep the "static" files (like <code>compose.yaml</code> and certain configuration files) separated
 				from files that are changed from within the containers (logs, caches, SQLite database etc.) or any sensitive
 				files like secrets. These <i>static</i> files are placed in an <code>app-manifests</code> folder, with sub
-				folders for each service. This allows for a GitOps style approach, and looks a bit like this:</p> <!--[!--><!--]--> <code><!---->app-manifests/
-- step-ca/
-  - compose.yaml
-- traefik/
-  - dynamic-config/
-  - compose.yaml
-  - traefik.yaml
-- whoami/
-  - compose.yaml<!----></code><!----> <p>For this tutorial I'll assume app-manifests is located at <code>/mnt/pool/app-manifests</code>. Of course you
-				can organize your project in a different way, just make sure to keep all paths pointing to the right place.</p> <p>Copy and paste below YAML content to your <code>app-manifests/traefik/compose.yaml</code> file.</p> <!--[--><h6>/mnt/pool/app-manifests/traefik/compose.yaml</h6><!--]--> <code><!---->services:
+				folders for each service. This allows for a <i>GitOps</i> style approach. At the end of this tutorial the file
+				structure looks a bit like this:</p> <span class="code-block"><!--[!--><!--[!--><!--]--> <pre><code><!---->app-manifests
+├── step-ca
+│	├── certs
+│	│	└── root_ca.crt
+│	└── compose.yaml
+└── traefik
+	├── dynamic-config
+	│	└── tls.yaml
+	├── compose.yaml
+	└── traefik.yaml
+
+apps
+├── step-ca
+│	├── data
+│	└── secrets
+│		├── root_ca_key
+│		└── root_ca_key_password
+└── traefik
+	└── acme<!----></code></pre><!--]--></span><!----> <p>For this tutorial I'll assume the <i>app-manifests</i> folder is located at <code>/mnt/pool/app-manifests</code>. Of course you may organize your project in a different way, just make sure
+				to keep all paths pointing to the right place.</p> <p>Copy and paste below YAML content to your <code>app-manifests/traefik/compose.yaml</code> file.</p> <span class="code-block"><!--[!--><!--[--><span class="code-block__filename"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file-braces-corner"><!--[--><!----><path d="M14 22h4a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v6"><!----></path><!----><!----><path d="M14 2v5a1 1 0 0 0 1 1h5"><!----></path><!----><!----><path d="M5 14a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1 1 1 0 0 1 1 1v2a1 1 0 0 0 1 1"><!----></path><!----><!----><path d="M9 22a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1"><!----></path><!----><!--]--><!----><!----></svg><!----><h6>/mnt/pool/app-manifests/traefik/compose.yaml</h6></span><!--]--> <pre><code><!---->services:
   traefik:
-    image: traefik:v3.5.4
+    image: traefik:v3.6.4 # https://hub.docker.com/_/traefik
     container_name: traefik
     depends_on:
       - socket-proxy
@@ -84,9 +97,8 @@
       - "80:80"
       - "443:443"
     volumes:
-      - "traefik-acme:/etc/traefik/acme:rw"
       # update the path on the left of : to match your location
-      - "/mnt/pool/app-manifests/traefik/traefik.yml:/etc/traefik/traefik.yml:ro"
+      - "/mnt/pool/app-manifests/traefik/traefik.yaml:/etc/traefik/traefik.yml:ro"
     environment:
       TZ: Etc/UTC
     labels:
@@ -118,15 +130,12 @@
 networks:
   traefik-public:
     external: true
-  internal_socket-proxy:
-
-volumes:
-  traefik-acme:<!----></code><!----> <p>The above <code>compose.yaml</code> file contains two services; the main Traefik instance and a
-				security-enhanced Docker socket proxy. The socket proxy allows us to limit which Docker API features are
-				accessible, thus limiting the attack surface on the Docker socket. The socket proxy is added to an "internal"
-				network which allows Traefik to communicate with it.</p> <p>It's time to configure Traefik. We'll use the socket proxy endpoint to access the Docker API. Logs are written
+  internal_socket-proxy:<!----></code></pre><!--]--></span><!----> <p>The above <code>compose.yaml</code> file contains two services; the main Traefik instance and a
+				security-enhanced <i>Docker socket proxy</i>. The socket proxy allows us to limit which <i>Docker API</i> features are accessible, thus limiting the attack surface on the Docker socket. To achieve this, we'll add the
+				socket proxy to an "internal" network which allows Traefik to communicate with it. Other services should not be
+				added to this network and therefore cannot access the socket proxy.</p> <p>It's time to configure Traefik. We'll use the socket proxy endpoint to access the Docker API. Logs are written
 				to <code>/dev/stdout</code> so they can be inspected using <code>docker logs traefik</code>. Copy and paste
-				below YAML content to your <code>app-manifests/traefik/traefik.yaml</code>:</p> <!--[--><h6>/mnt/pool/app-manifests/traefik/traefik.yaml</h6><!--]--> <code><!---->api:
+				below YAML content to your <code>app-manifests/traefik/traefik.yaml</code>:</p> <span class="code-block"><!--[!--><!--[--><span class="code-block__filename"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file-braces-corner"><!--[--><!----><path d="M14 22h4a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v6"><!----></path><!----><!----><path d="M14 2v5a1 1 0 0 0 1 1h5"><!----></path><!----><!----><path d="M5 14a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1 1 1 0 0 1 1 1v2a1 1 0 0 0 1 1"><!----></path><!----><!----><path d="M9 22a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1"><!----></path><!----><!--]--><!----><!----></svg><!----><h6>/mnt/pool/app-manifests/traefik/traefik.yaml</h6></span><!--]--> <pre><code><!---->api:
   insecure: true # for now, allow insecure connections
   dashboard: true
 
@@ -135,6 +144,9 @@ providers:
     endpoint: "tcp://socket-proxy:2375" # this must match the socket proxy's name and port!
     exposedByDefault: false
     network: traefik-public # name of the network we created before
+  file:
+    directory: "/etc/traefik/dynamic-config"
+    watch: true
 
 entryPoints:
   web:
@@ -156,54 +168,57 @@ accessLog:
 
 global:
   checkNewVersion: true
-  sendAnonymousUsage: false<!----></code><!----> <p class="info">Because Traefik runs on port 80 and 443, it is important that your host machine does not use any
-				of those ports!</p> <h3 id="2.1"><span>2.1.</span> Create Traefik app on TrueNAS</h3> <p>As mentioned at the start of this tutorial, I'm using a TrueNAS server as my host machine. Head over to <a href="#2.2">#2.2</a> if you'd like to use (Docker) compose instead. For this next part I'll assume you already
+  sendAnonymousUsage: false<!----></code></pre><!--]--></span><!----> <p class="info">Because Traefik runs on port 80 and 443, it is important that your host machine does not use any
+				of those ports!</p> <p>It is also possible to run Traefik without access to the Docker socket. Have a look at <a target="_blank" rel="noopener noreferrer" href="https://doc.traefik.io/traefik/reference/install-configuration/providers/overview/"><!---->the provider
+				documentation<!----></a><!----> for additional info and adjust above <code>traefik.yaml</code> according to it.</p> <h3 id="2.1"><span>2.1.</span> Create Traefik app on TrueNAS</h3> <p>As mentioned at the start of this tutorial, I'm using a TrueNAS server as my host machine. Head over to <a href="#2.2">#2.2</a> if you'd like to use (Docker) compose instead. For this next part I'll assume you already
 				have configured <a target="_blank" rel="noopener noreferrer" href="https://www.truenas.com/docs/scale/25.10/scaleuireference/apps/"><!---->a pool to store your
-					apps<!----></a><!---->.</p> <p>To keep things simple, I'll add Traefik as a <a target="_blank" rel="noopener noreferrer" href="https://www.truenas.com/docs/scale/25.10/scaleuireference/apps/installcustomappscreens/#add-custom-app-screen"><!---->custom
+					apps<!----></a><!----> on your TrueNAS machine.</p> <p>To keep things simple, I'll add Traefik as a <a target="_blank" rel="noopener noreferrer" href="https://www.truenas.com/docs/scale/25.10/scaleuireference/apps/installcustomappscreens/#add-custom-app-screen"><!---->custom
 				"App"<!----></a><!----> using the TrueNAS webui. Headover to <i>Apps > Discover Apps > Install via YAML</i>. We'll make use
-				of a YAML trick to include our <code>compose.yaml</code> file from our app-manifests folder.</p> <!--[!--><!--]--> <code><!---->include:
-- /mnt/pool/app-manifests/traefik/compose.yaml<!----></code><!----> <p>Copy/paste above YAML and save it. Your newly created "custom app" should start any moment after the required
+				of a YAML trick to include our <code>compose.yaml</code> file from our app-manifests folder.</p> <span class="code-block"><!--[!--><!--[!--><!--]--> <pre><code><!---->include:
+- /mnt/pool/app-manifests/traefik/compose.yaml<!----></code></pre><!--]--></span><!----> <p>Copy/paste above YAML and save it. Your newly created "custom app" should start any moment after the required
 				images are downloaded.</p> <h3 id="2.2"><span>2.2.</span> Run Traefik using compose</h3> <p>Since we've already created a <code>compose.yaml</code> file for Traefik, running the service using Docker
-				compose is really easy:</p> <!--[!--><!--]--> <code><!---->docker compose -f /mnt/pool/app-manifests/traefik/compose.yaml up -d<!----></code><!----> <p>The Traefik service should start any moment after the required images are downloaded.</p> <h3 id="2.3"><span>2.3.</span> Confirm Traefik is up and running</h3> <p>To test if Traefik runs as expected, open <a target="_blank" rel="noopener noreferrer" href="http://traefik.svc.lan/"><!---->traefik.svc.lan<!----></a><!----> in your
+				compose is a matter of running the following command:</p> <span class="code-block"><!--[--><pre><span class="code-block__command"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-terminal"><!--[--><!----><path d="M12 19h8"><!----></path><!----><!----><path d="m4 17 6-6-6-6"><!----></path><!----><!--]--><!----><!----></svg><!----></span><code><!---->docker compose -f /mnt/pool/app-manifests/traefik/compose.yaml up<!----></code></pre><!--]--></span><!----> <p>The Traefik service should start any moment after the required images are downloaded.</p> <h3 id="2.3"><span>2.3.</span> Confirm Traefik is up and running</h3> <p>To test if Traefik runs as expected, open <a target="_blank" rel="noopener noreferrer" href="http://traefik.svc.lan/"><!---->traefik.svc.lan<!----></a><!----> in your
 				browser. You should be greeted by the <a target="_blank" rel="noopener noreferrer" href="https://doc.traefik.io/traefik/reference/install-configuration/api-dashboard/"><!---->Traefik dashboard<!----></a><!---->.
 				If, for whatever reason, you get a "404 page not found" error, run <code>docker logs traefik</code> to see what
-				went wrong.</p> <h2 id="3"><span>3.</span> Generate a root certificate</h2> <p>You can skip this part and headover to <a href="#4">#4</a> if you already have a root certificate. Otherwise,
+				went wrong.</p> <h2 id="3"><span>3.</span> Generate a root certificate using <code>step</code> cli</h2> <p>You can skip this part and headover to <a href="#4">#4</a> if you already have a root certificate. Otherwise,
 				continue to generate your own custom root certificate. For this I'll use the <code>step</code> cli which makes
 				it fairly easy to do so + we can use this tool later on to generate additional certificates once the step-ca
 				service is up and running. However, if you do not plan to use this, or don't want to install this tool, feel
-				free to use something else (eg. OpenSSL) to generate a root certificate.</p> <h3 id="3.1"><span>3.1</span>Generate a root certificate using step cli</h3> <p>Visit the <a target="_blank" rel="noopener noreferrer" href="https://smallstep.com/docs/step-cli/installation/"><!---->installation instructions page<!----></a><!----> to
-				install the <code>step</code> cli on your local machine. After that we'll need to create a password for our root
-				certificate and store this in a file. You can create the file yourself and enter a secure password, or run below
-				command to let <code>openssl</code> do it.</p> <code>openssl rand -hex 32 > ~/root_ca_key_password</code> <p>Now it's time to generate our root certificate and a private key:</p> <!--[!--><!--]--> <code><!---->step certificate create my-root-ca \
-	~/root_ca.crt \
-	~/root_ca_key \
+				free to use something else (eg. OpenSSL) to generate a root certificate.</p> <p>Visit the <a target="_blank" rel="noopener noreferrer" href="https://smallstep.com/docs/step-cli/installation/"><!---->installation instructions page<!----></a><!----> to
+				install the <code>step</code> cli on your <b>local machine</b>. After that we'll need to create a password for
+				our root certificate and store this in a file. You can create the file yourself and enter a secure password, or
+				run below command to let <code>openssl</code> do it:</p> <span class="code-block"><!--[--><pre><span class="code-block__command"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-terminal"><!--[--><!----><path d="M12 19h8"><!----></path><!----><!----><path d="m4 17 6-6-6-6"><!----></path><!----><!--]--><!----><!----></svg><!----></span><code><!---->openssl rand -hex 32 > ./root_ca_key_password<!----></code></pre><!--]--></span><!----> <p>Now it's time to generate our root certificate and a private key:</p> <span class="code-block"><!--[--><pre><span class="code-block__command"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-terminal"><!--[--><!----><path d="M12 19h8"><!----></path><!----><!----><path d="m4 17 6-6-6-6"><!----></path><!----><!--]--><!----><!----></svg><!----></span><code><!---->step certificate create my-root-ca \
+	./root_ca.crt \
+	./root_ca_key \
 	--profile=root-ca \
-	--password-file=~/root_ca_key_password<!----></code><!----> <p class="alert">Store your password and the generate private key in a secure location!</p> <p>Copy the generated public certificate, private key and password file to your host machine so we can use them to
-				set up the step-ca service.</p> <h2 id="4"><span>4.</span> Set up step-ca ACME service</h2> <p>Everything is prepared, time to set up our step-ca ACME server. Copy your <i>public</i> certificate to <code>app-manifests/step-ca/root_ca.crt</code>, your <i>private</i> key to <code>apps/step-ca/secrets/root_ca_key</code> and password to <code>apps/step-ca/secrets/root_ca_key_password</code>.</p> <p class="alert">Keep the private key and/or password separated from the "static" config files so you don't
-				accidentally commit it to your (online) repository!</p> <p>We can now create the <code>compose.yaml</code> file for step-ca:</p> <!--[--><h6>/mnt/pool/app-manifests/step-ca/compose.yaml</h6><!--]--> <code><!---->services:
+	--password-file=./root_ca_key_password<!----></code></pre><!--]--></span><!----> <p class="alert">Store your password and the generate private key in a secure location!</p> <h2 id="4"><span>4.</span> Set up step-ca</h2> <p>Everything is prepared, time to set up our step-ca ACME server on the <b>host machine</b>. Create the following
+				directories:</p> <span class="code-block"><!--[!--><!--[!--><!--]--> <pre><code><!---->drwxrwx--- (770) /mnt/pool/apps/step-ca/data
+dr-xr-x--- (550) /mnt/pool/apps/step-ca/secrets<!----></code></pre><!--]--></span><!----> <p>Copy your
+				(generated) <i>public certificate</i> to <code>app-manifests/step-ca/root_ca.crt</code>, your <i>private key</i> to <code>apps/step-ca/secrets/root_ca_key</code> and <i>password file</i> to <code>apps/step-ca/secrets/root_ca_key_password</code>. We'll use these files to start the step-ca service with
+				our existing root certificate thanks to a little <a target="_blank" rel="noopener noreferrer" href="https://github.com/smallstep/certificates/pull/2461"><!---->PR<!----></a><!----> I submitted.</p> <p class="info">Keep the private key and password file separated from the "static" config files so you do not
+				accidentally commit it to your (online) repository!</p> <p>We can now create the <code>compose.yaml</code> file for step-ca:</p> <span class="code-block"><!--[!--><!--[--><span class="code-block__filename"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file-braces-corner"><!--[--><!----><path d="M14 22h4a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v6"><!----></path><!----><!----><path d="M14 2v5a1 1 0 0 0 1 1h5"><!----></path><!----><!----><path d="M5 14a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1 1 1 0 0 1 1 1v2a1 1 0 0 0 1 1"><!----></path><!----><!----><path d="M9 22a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1"><!----></path><!----><!--]--><!----><!----></svg><!----><h6>/mnt/pool/app-manifests/step-ca/compose.yaml</h6></span><!--]--> <pre><code><!---->services:
   step-ca:
-    image: smallstep/step-ca # https://hub.docker.com/r/smallstep/step-ca
+    image: smallstep/step-ca:0.29.0 # https://hub.docker.com/r/smallstep/step-ca
+    container_name: step-ca
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
-    user: 1000:1000
+    user: 1000:1000 # same user which owns the apps/step-ca/* dirs
+    hostname: step-ca.svc.lan
     networks:
       traefik-public:
         aliases:
-          - step-ca.svc.traefik-public.local # todo: check of step-ca.svc.lan ook werkt
+          - step-ca.svc.traefik-public.local
     volumes:
-      - "/mnt/pool/apps/step-ca/config:/home/step"
-      # uncomment below line when using version 0.28.4
-      # - "/mnt/pool/app-manifests/step-ca/entrypoint.sh:/entrypoint.sh"
-      - "/mnt/pool/app-manifests/step-ca/root_ca.crt:/mnt/root_ca.crt"
+      - "/mnt/pool/apps/step-ca/data:/home/step"
     secrets:
+      - root_ca.crt
       - root_ca_key
       - root_ca_key_password
     environment:
       DOCKER_STEPCA_INIT_NAME: My intermediate CA
       DOCKER_STEPCA_INIT_DEPLOYMENT_TYPE: standalone
-      DOCKER_STEPCA_INIT_ROOT_FILE: /mnt/root_ca.crt
-      DOCKER_STEPCA_INIT_DNS_NAMES: step-ca.svc.traefik-public.local,step-ca.svc.lan
+      DOCKER_STEPCA_INIT_DNS_NAMES: step-ca.svc.lan,step-ca.svc.traefik-public.local,step-ca
       DOCKER_STEPCA_INIT_ACME: true
     labels:
       - "traefik.enable=true"
@@ -216,35 +231,188 @@ networks:
     external: true
 
 secrets:
+  root_ca.crt:
+    file: /mnt/pool/app-manifests/step-ca/root_ca.crt
   root_ca_key:
     file: /mnt/pool/apps/step-ca/secrets/root_ca_key
   root_ca_key_password:
-    file: /mnt/pool/apps/step-ca/secrets/root_ca_key_password<!----></code><!----> <p>todo: Korte uitleg TLS passthrough</p> <h3 id="4.1"><span>4.1.</span> Entrypoint fix for version 0.28.4</h3> <p>At the time of writing, <code>smallstep/step-ca</code> image version 0.28.4 unfortunately does not include
-				environment variables to start the container with an existing root certificate. Luckily I've submitted a <a target="_blank" rel="noopener noreferrer" href="https://github.com/smallstep/certificates/pull/2461"><!---->PR that fixes this<!----></a><!---->, which will probably be
-				available when version 0.28.5 is released. So if you're using 0.28.4, make sure to download the <a target="_blank" rel="noopener noreferrer" href="https://github.com/smallstep/certificates/blob/61e37b79fca22f5360e986260bb72236f626ef88/docker/entrypoint.sh"><!---->updated
-					entrypoint.sh<!----></a><!----> and mount it in your <code>compose.yaml</code>.</p> <!--[!--><!--]--> <code><!---->curl https://raw.githubusercontent.com/smallstep/certificates/61e37b79fca22f5360e986260bb72236f626ef88/docker/entrypoint.sh \
-	-o /mnt/pool/app-manifests/step-ca/entrypoint.sh<!----></code><!----> <h3 id="4.2"><span>4.2.</span> Run step-ca service</h3> <p>Either add and run the step-ca service as a custom TrueNAS App:</p> <!--[!--><!--]--> <code><!---->include:
-- /mnt/pool/app-manifests/step-ca/compose.yaml<!----></code><!----> <p>Or using Docker compose:</p> <!--[!--><!--]--> <code><!---->docker compose -f /mnt/pool/app-manifests/step-ca/compose.yaml up -d<!----></code><!----> <p>The container should start and indicate its healthy after a minute. After that we have to adjust the Traefik
-				config a bit, so it will use our step-ca service as a <a target="_blank" rel="noopener noreferrer" href="https://doc.traefik.io/traefik/reference/install-configuration/tls/certificate-resolvers/acme/"><!---->cert
-					resolver<!----></a><!---->.</p> <h2 id="5"><span>5.</span> Invoking trust using our root certificate</h2> <p>The final step; we need to install our root certificate on each computer, smartphone or other device that wants
+    file: /mnt/pool/apps/step-ca/secrets/root_ca_key_password<!----></code></pre><!--]--></span><!----> <p>As you may have noticed, we set both a <code>hostname</code> and alias for the <code>traefik-public</code> networks. The healthcheck call from within the step-ca container uses the first DNS entry set by <code>DOCKER_STEPCA_INIT_DNS_NAMES</code>,
+				prefixed with the port. And because we configure Traefik to send any calls from ports :443 to :9000, we cannot
+				use the reverse-proxy. A quickfix is to set the hostname which resolves to the container itself.
+				The network alias is needed because Traefik fails to reach the <code>step-ca.svc.lan</code> hostname.</p> <p>Also, the Traefik labels for our step-ca service are a bit different from our Traefik dashboard; we'll
+				configure this service to allow <i>TLS passthrough</i>. This is needed because step-ca generates its own TLS
+				certificate based on the provided root certificate. So in this case, Traefik should not generate a TLS
+				certificate. Thus we have to configure a <a target="_blank" rel="noopener noreferrer" href="https://doc.traefik.io/traefik/reference/routing-configuration/tcp/routing/router/"><!---->TCP router<!----></a><!---->,
+				which allows the TLS certificate to passthrough, instead of an HTTP router.</p> <p>With the <code>compose.yaml</code> file created, its time to start the container. Either add and run the
+				step-ca service as a custom TrueNAS App:</p> <span class="code-block"><!--[!--><!--[!--><!--]--> <pre><code><!---->include:
+- /mnt/pool/app-manifests/step-ca/compose.yaml<!----></code></pre><!--]--></span><!----> <p>Or use Docker compose:</p> <span class="code-block"><!--[--><pre><span class="code-block__command"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-terminal"><!--[--><!----><path d="M12 19h8"><!----></path><!----><!----><path d="m4 17 6-6-6-6"><!----></path><!----><!--]--><!----><!----></svg><!----></span><code><!---->docker compose -f /mnt/pool/app-manifests/step-ca/compose.yaml up<!----></code></pre><!--]--></span><!----> <p>The container should start, and after ~30 seconds performs its first healthcheck.</p> <span class="code-block"><!--[!--><!--[!--><!--]--> <pre><code><!---->...
+step-ca  | 2025/12/10 14:47:50 Serving HTTPS on :9000 ...
+step-ca  | time="2025-12-10T14:48:20Z" level=info method=GET name=ca path=/health protocol=HTTP/2.0status=200 user-agent="Smallstep CLI/0.29.0 (linux/amd64)"<!----></code></pre><!--]--></span><!----> <p>Run below command to check if the container is marked as healthy:</p> <span class="code-block"><!--[--><pre><span class="code-block__command"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-terminal"><!--[--><!----><path d="M12 19h8"><!----></path><!----><!----><path d="m4 17 6-6-6-6"><!----></path><!----><!--]--><!----><!----></svg><!----></span><code><!---->docker ps -f health=healthy<!----></code></pre><!--]--></span><!----> <span class="code-block"><!--[!--><!--[!--><!--]--> <pre><code><!---->CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS                    PORTS     NAMES
+b6022391a371   smallstep/step-ca:0.29.0   "/bin/bash /entrypoi…"   49 seconds ago   Up 48 seconds (healthy)             step-ca<!----></code></pre><!--]--></span><!----> <h3 id="4.1"><span>4.1.</span> Configure step-ca as a cert resolver for Traefik</h3> <p>Now we have step-ca up and running, we'll need to adjust the Traefik config a bit so it will use our step-ca
+				service as a <a target="_blank" rel="noopener noreferrer" href="https://doc.traefik.io/traefik/reference/install-configuration/tls/certificate-resolvers/acme/"><!---->cert
+					resolver<!----></a><!---->.</p> <p>Update your <code>app-manifests/traefik/traefik.yaml</code> file to include the following:</p> <span class="code-block"><!--[!--><!--[--><span class="code-block__filename"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file-braces-corner"><!--[--><!----><path d="M14 22h4a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v6"><!----></path><!----><!----><path d="M14 2v5a1 1 0 0 0 1 1h5"><!----></path><!----><!----><path d="M5 14a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1 1 1 0 0 1 1 1v2a1 1 0 0 0 1 1"><!----></path><!----><!----><path d="M9 22a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1"><!----></path><!----><!--]--><!----><!----></svg><!----><h6>/mnt/pool/app-manifests/traefik/traefik.yaml</h6></span><!--]--> <pre><code><!---->api:
+  insecure: true # for now, allow insecure connections
+  dashboard: true
+
+providers:
+  docker:
+    endpoint: "tcp://socket-proxy:2375" # this must match the socket proxy's name and port!
+    exposedByDefault: false
+    network: traefik-public # name of the network we created before
+  file:
+    directory: "/etc/traefik/dynamic-config"
+    watch: true
+
+entryPoints:
+  web:
+    asDefault: true
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+  websecure:
+    asDefault: true
+    address: ":443"
+    http:
+      tls:
+        certResolver: step-ca
+
+certificatesResolvers:
+  step-ca:
+    acme:
+      email: your-email@example.com
+      storage: "/etc/traefik/acme/acme.json"
+      caCertificates:
+        - "/etc/traefik/certs/roots.pem"
+      caServer: "https://step-ca.svc.traefik-public.local:9000/acme/acme/directory"
+      caServerName: step-ca
+      tlsChallenge: true
+      httpChallenge:
+        entryPoint: web
+
+log:
+  level: DEBUG
+  filePath: "/dev/stdout"
+
+accessLog:
+  filePath: "/dev/stdout"
+  filters:
+    statusCodes:
+      - "400-499"
+      - "500-599"
+    retryAttempts: true
+    minDuration: "10ms"
+
+global:
+  checkNewVersion: true
+  sendAnonymousUsage: false<!----></code></pre><!--]--></span><!----> <p>Add the following TLS config:</p> <span class="code-block"><!--[!--><!--[--><span class="code-block__filename"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file-braces-corner"><!--[--><!----><path d="M14 22h4a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v6"><!----></path><!----><!----><path d="M14 2v5a1 1 0 0 0 1 1h5"><!----></path><!----><!----><path d="M5 14a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1 1 1 0 0 1 1 1v2a1 1 0 0 0 1 1"><!----></path><!----><!----><path d="M9 22a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1"><!----></path><!----><!--]--><!----><!----></svg><!----><h6>/mnt/pool/app-manifests/traefik/dynamic-config/tls.yaml</h6></span><!--]--> <pre><code><!---->tls:
+  options:
+    default:
+      minVersion: VersionTLS12
+      cipherSuites:
+        - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305
+        - TLS_AES_128_GCM_SHA256
+        - TLS_AES_256_GCM_SHA384
+        - TLS_CHACHA20_POLY1305_SHA256
+      curvePreferences:
+        - CurveP521
+        - CurveP384<!----></code></pre><!--]--></span><!----> <p>Finally we need to update our <code>compose.yaml</code>.</p> <span class="code-block"><!--[!--><!--[--><span class="code-block__filename"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file-braces-corner"><!--[--><!----><path d="M14 22h4a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v6"><!----></path><!----><!----><path d="M14 2v5a1 1 0 0 0 1 1h5"><!----></path><!----><!----><path d="M5 14a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1 1 1 0 0 1 1 1v2a1 1 0 0 0 1 1"><!----></path><!----><!----><path d="M9 22a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1"><!----></path><!----><!--]--><!----><!----></svg><!----><h6>/mnt/pool/app-manifests/traefik/compose.yaml</h6></span><!--]--> <pre><code><!---->services:
+  traefik:
+    image: traefik:v3.6.4 # https://hub.docker.com/_/traefik
+    container_name: traefik
+    depends_on:
+      - download-certs
+      - socket-proxy
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    user: 1000:1000
+    deploy:
+      resources:
+        limits:
+          cpus: 2
+          memory: 2048M
+    networks:
+      - traefik-public # name of the network we created before
+      - internal_socket-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # update the path on the left of : to match your location
+      - "/mnt/pool/app-manifests/traefik/traefik.yaml:/etc/traefik/traefik.yml:ro"
+      - "/mnt/pool/app-manifests/traefik/dynamic-config:/etc/traefik/dynamic-config:ro"
+      - "/mnt/pool/apps/traefik/acme:/etc/traefik/acme:rw"
+      - "/mnt/pool/apps/traefik/certs:/etc/traefik/certs:ro"
+    environment:
+      TZ: Etc/UTC
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik-dashboard.rule=Host(`traefik.svc.lan`)"
+      - "traefik.http.routers.traefik-dashboard.service=api@internal"
+      - "traefik.http.services.traefik-dashboard.loadbalancer.server.port=8080"
+
+  download-certs:
+    image: alpine/curl:8.14.1
+    security_opt:
+      - no-new-privileges:true
+    user: 1000:1000
+    networks:
+      - traefik-public
+    volumes:
+      - "/mnt/pool/apps/traefik/certs:/etc/certs:rw"
+    command: --insecure https://step-ca.svc.traefik-public.local:9000/roots.pem --output /etc/certs/roots.pem
+
+  socket-proxy:
+    image: ghcr.io/tecnativa/docker-socket-proxy:v0.4.1
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: 2
+          memory: 256M
+    networks:
+      - internal_socket-proxy
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    environment:
+      CONTAINERS: 1
+      NETWORKS: 1
+      SERVICES: 1
+      TASKS: 1
+
+networks:
+  traefik-public:
+    external: true
+  internal_socket-proxy:<!----></code></pre><!--]--></span><!----> <p>That's a lot of configuration. Here's how it works. We've got our step-ca service up and running, with a
+				network alias that's reachable by Traefik. Before Traefik starts, the <i>download-certs</i> service downloads
+				the public root certificates from step-ca to the shared volume <code>/mnt/pool/apps/traefik/certs</code>.
+				Traefik needs these certificates, otherwise it cannot verify the secure connection and will not allow any calls
+				to the respective backend service.</p> <h2 id="5"><span>5.</span> Invoking trust using our root certificate</h2> <p>The final step; we need to install our root certificate on each computer, smartphone or other device that wants
 				to securely access the services which we expose via Traefik. We'll do this by adding the generated <code>root.crt</code> file to the trusted certificate store on the relevant device. This can be a hassle if you have to copy the file
 				multiple times. Luckily, the step-ca service has an endpoint which serves our generated root certificate. And
-				since we already have step-ca exposed via Traefik, its fairly easy to make use of this.</p> <h3 id="5.1"><span>5.1.</span> Install on Ubuntu</h3> <p>Letting Ubuntu trust our root certificate is pretty easy. Simply download the certificate and copy it to the <code>/usr/local/share/ca-certificates/</code> folder. Make sure <code>curl</code> and <code>ca-certificates</code> are installed and use below commands.</p> <code>curl --insecure -O https://step-ca.svc.lan/roots.pem
+				since we already have step-ca exposed via Traefik, its fairly easy to make use of this.</p> <h3 id="5.1"><span>5.1.</span> Install on Ubuntu</h3> <p>Letting Ubuntu trust our root certificate is pretty easy. Simply download the certificate and copy it to the <code>/usr/local/share/ca-certificates/</code> folder. Make sure <code>curl</code> and <code>ca-certificates</code> are installed and use below commands.</p> <span class="code-block"><!--[--><pre><span class="code-block__command"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-terminal"><!--[--><!----><path d="M12 19h8"><!----></path><!----><!----><path d="m4 17 6-6-6-6"><!----></path><!----><!--]--><!----><!----></svg><!----></span><code><!---->curl --insecure -O https://step-ca.svc.lan/roots.pem
 sudo cp roots.pem /usr/local/share/ca-certificates/my-root-ca.crt
-sudo update-ca-certificates</code> <p class="info">Remember, at this point the root certificate is not yet installed on this machine so we have to
+sudo update-ca-certificates<!----></code></pre><!--]--></span><!----> <p class="info">Remember, at this point the root certificate is not yet installed on this machine so we have to
 				add the <code>--insecure</code> flag to the <code>curl</code> command. Otherwise it'll fail because the secure
-				connection cannot be verified yet.</p> <p>To verify our root certificate is added, run:</p> <code>sudo ls /etc/ssl/certs/ | grep my-root-ca</code> <h2 id="6"><span>6.</span> Test SSL redirect using whoami</h2> <p>It's time for the final test to see if TLS certificates are generated for any service we'd like to expose.
-				We'll do this using the handy container image <code>traefik/whoami</code>.</p></div></div></main><!----><!----><!----><!--]--><!----></div> <footer><div class="footer__socials"><a target="_blank" rel="noopener noreferrer" href="https://github.com/roeldev"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg><!----></a><!----> <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/roelschut/"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg><!----></a><!----> <a target="_blank" rel="noopener noreferrer" href="https://patreon.com/roeldev?utm_medium=unknown&amp;utm_source=join_link&amp;utm_campaign=creatorshare_creator&amp;utm_content=copyLink"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Patreon</title><path d="M22.957 7.21c-.004-3.064-2.391-5.576-5.191-6.482-3.478-1.125-8.064-.962-11.384.604C2.357 3.231 1.093 7.391 1.046 11.54c-.039 3.411.302 12.396 5.369 12.46 3.765.047 4.326-4.804 6.068-7.141 1.24-1.662 2.836-2.132 4.801-2.618 3.376-.836 5.678-3.501 5.673-7.031Z"></path></svg><!----></a><!----></div> <div class="footer__copyright">Copyright © 2025, Roel Schut. All rights reserved.</div></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+				connection cannot be verified yet.</p> <p>To verify our root certificate is added, run:</p> <span class="code-block"><!--[--><pre><span class="code-block__command"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-terminal"><!--[--><!----><path d="M12 19h8"><!----></path><!----><!----><path d="m4 17 6-6-6-6"><!----></path><!----><!--]--><!----><!----></svg><!----></span><code><!---->sudo ls /etc/ssl/certs/ | grep my-root-ca<!----></code></pre><!--]--></span><!----> <h2 id="6"><span>6.</span> Test SSL redirect using whoami</h2> <p>It's time for the final test to see if TLS certificates are generated for any service we'd like to expose.
+				A simple way to do this is using the <code>traefik/whoami</code> container image.</p></div></div></main><!----><!----><!----><!--]--><!----></div> <footer><div class="footer__socials"><a target="_blank" rel="noopener noreferrer" href="https://github.com/roeldev"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg><!----></a><!----> <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/roelschut/"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg><!----></a><!----> <a target="_blank" rel="noopener noreferrer" href="https://patreon.com/roeldev?utm_medium=unknown&amp;utm_source=join_link&amp;utm_campaign=creatorshare_creator&amp;utm_content=copyLink"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Patreon</title><path d="M22.957 7.21c-.004-3.064-2.391-5.576-5.191-6.482-3.478-1.125-8.064-.962-11.384.604C2.357 3.231 1.093 7.391 1.046 11.54c-.039 3.411.302 12.396 5.369 12.46 3.765.047 4.326-4.804 6.068-7.141 1.24-1.662 2.836-2.132 4.801-2.618 3.376-.836 5.678-3.501 5.673-7.031Z"></path></svg><!----></a><!----></div> <div class="footer__copyright">Copyright © 2025, Roel Schut. All rights reserved.</div></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_xvx9p6 = {
+					__sveltekit_15tds2h = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
-					import("../../_app/immutable/bundle.DeUGG5-E.js").then((app) => {
+					import("../../_app/immutable/bundle.E102wNqy.js").then((app) => {
 						app.start(element, {
 							node_ids: [0, 2, 5],
 							data: [null,null,null],
